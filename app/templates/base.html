@@ -1,1 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz App</h1>
+        <hr>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
 

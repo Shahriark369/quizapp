@@ -1,0 +1,19 @@
+quizapp/
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   └── templates/
+│       ├── base.html
+│       ├── index.html
+│       ├── login.html
+│       ├── register.html
+│       ├── dashboard.html
+│       ├── create_quiz.html
+│       ├── take_quiz.html
+│       └── result.html
+├── static/
+│   └── style.css
+├── run.py
+├── requirements.txt
+└── README.md

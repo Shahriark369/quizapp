@@ -1,1 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Quizzes</h2>
+<a href="{{ url_for('create_quiz') }}">Create New Quiz</a><br><br>
+<ul>
+{% for quiz in quizzes %}
+    <li>{{ quiz.title }} -
+        <a href="{{ url_for('take_quiz', quiz_id=quiz.id) }}">Take Quiz</a> |
+        <form action="{{ url_for('add_question', quiz_id=quiz.id) }}" method="POST" style="display:inline;">
+            <input name="question_text" placeholder="Question" required>
+            <input name="option_a" placeholder="A" required>
+            <input name="option_b" placeholder="B" required>
+            <input name="option_c" placeholder="C" required>
+            <input name="option_d" placeholder="D" required>
+            <input name="correct_answer" placeholder="Correct (A/B/C/D)" required>
+            <button type="submit">Add</button>
+        </form>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
 
